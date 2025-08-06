@@ -36,7 +36,10 @@ body {
   gap: 2rem;
 }
 
-.save-btn {
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid var(--color-red);
   border-radius: 0.5rem;
   padding: 1rem 2rem;
@@ -53,13 +56,38 @@ body {
   }
 }
 
-a {
-  color: white;
-}
-
 .link-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   text-align: left;
+  width: 100%;
+
+  li {
+    display: block;
+    background-color: var(--color-darker-red);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-dark-red);
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+  }
+}
+
+.delete-btn {
+  padding: 0.25rem 0.75rem;
+}
+
+.fallback-text {
+  text-align: center;
 }

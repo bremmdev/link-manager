@@ -1,3 +1,5 @@
+import DeleteButton from "./DeleteButton";
+
 type Link = {
   id: string;
   title: string;
@@ -47,20 +49,32 @@ export default function LinkManager() {
     });
   }
 
+  async function deleteLink(id: string) {
+    setLinks((prevLinks) => {
+      const newLinks = prevLinks.filter((l) => l.id !== id);
+      setLinksInStorage(newLinks);
+      return newLinks;
+    });
+  }
+
   return (
     <div className="container">
-      <button className="save-btn" onClick={saveLink}>
+      <button className="btn" onClick={saveLink}>
         Save Active Tab
       </button>
       <ul className="link-list">
-        {links &&
+        {links && links.length > 0 ? (
           links.map((l) => (
             <li key={l.id}>
               <a href={l.url} target="_blank" rel="noopener noreferrer">
                 {l.title}
               </a>
+              <DeleteButton onClick={() => deleteLink(l.id)} />
             </li>
-          ))}
+          ))
+        ) : (
+          <p className="fallback-text">There are no saved links.</p>
+        )}
       </ul>
     </div>
   );
