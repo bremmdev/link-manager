@@ -49,7 +49,7 @@ h1 {
   align-items: center;
   border: 1px solid var(--color-red);
   border-radius: 0.5rem;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem;
   font-weight: 700;
   font-size: inherit;
   background-color: var(--color-darker-red);
@@ -71,6 +71,10 @@ form {
   width: 100%;
 }
 
+form * {
+  font-family: inherit;
+}
+
 label {
   font-weight: 700;
   color: inherit;
@@ -81,13 +85,14 @@ label {
 select {
   border: 1px solid #ccc;
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 0.7rem;
   font-weight: 700;
   font-size: inherit;
   background-color: var(--color-darkest-red);
   color: inherit;
   cursor: pointer;
   outline: none;
+  height: auto;
 
   option {
     background-color: var(--color-darkest-red);
@@ -149,7 +154,7 @@ select {
 
 .filter-area {
   width: 100%;
-  padding: 0.75rem;
+  padding: 0.5rem;
   background-color: var(--color-darker-red);
   border-radius: 0.5rem;
 }
