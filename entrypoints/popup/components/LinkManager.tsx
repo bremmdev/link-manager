@@ -87,7 +87,7 @@ export default function LinkManager({ links, setLinks }: LinkProps) {
             setSelectedFilter(e.target.value as Category | "All")
           }
         >
-          <option value="All">All Categories</option>
+          <option value="All">all</option>
           {categories.map((c) => (
             <option key={c} value={c}>
               {c}

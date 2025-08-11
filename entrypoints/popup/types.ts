@@ -1,15 +1,15 @@
 export const categories = [
-  "Uncategorized",
-  "A11Y",
-  "Azure",
-  "Cloudflare",
-  "Databases",
-  "Dotnet",
-  "Music",
-  "Python",
-  "React",
-  "Theo",
-  "Typescript",
+  "uncategorized",
+  "a11y",
+  "azure",
+  "cloudflare",
+  "databases",
+  "dotnet",
+  "music",
+  "python",
+  "react",
+  "theo",
+  "typescript",
 ] as const;
 
 export type Category = (typeof categories)[number];
