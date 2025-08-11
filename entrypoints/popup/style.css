@@ -123,7 +123,7 @@ select {
   outline: none;
   height: auto;
 
-  option {
+  & option {
     background-color: var(--color-darkest-red);
     color: inherit;
     padding: 0.5rem;
@@ -159,13 +159,13 @@ select {
     align-items: center;
     flex: 1;
 
-    .category {
+    & .category {
       font-weight: 700;
       font-size: 0.9em;
       background-color: white;
       border-radius: 2rem;
       padding: 0.3rem 1rem;
-      color: var(--color-darker-red);
+      color: var(--color-dark-red);
       cursor: initial;
       margin: 0 1rem;
     }
