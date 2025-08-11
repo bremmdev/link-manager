@@ -1,0 +1,14 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	  width="128"
+	  height="128"
+	  viewBox="0 0 64 64"
+	  fill="none"
+	  stroke="#460809"
+	  stroke-width="3"
+	  stroke-linejoin="round"
+	>
+	  <path
+	    d="M20 12h24a2 2 0 0 1 2 2v38l-14-9-14 9V14a2 2 0 0 1 2-2z"
+	  />
+	</svg>
