@@ -1,35 +1,18 @@
 import { FormEvent } from "react";
 import DeleteButton from "./DeleteButton";
+import type { Link, Category, LinkProps } from "../types";
+import { categories } from "../types";
 
-const categories = [
-  "Uncategorized",
-  "A11Y",
-  "Azure",
-  "Cloudflare",
-  "Databases",
-  "React",
-] as const;
-
-type Category = (typeof categories)[number];
-
-type Link = {
-  id: string;
-  title: string;
-  url: string;
-  category: Category;
-};
-
-async function getLinksFromStorage() {
+export async function getLinksFromStorage() {
   const links = (await storage.getItem<Array<Link>>("sync:links")) ?? [];
   return links;
 }
 
-async function setLinksInStorage(links: Array<Link>): Promise<void> {
+export async function setLinksInStorage(links: Array<Link>): Promise<void> {
   await storage.setItem<Array<Link>>("sync:links", links);
 }
 
-export default function LinkManager() {
-  const [links, setLinks] = useState<Array<Link>>([]);
+export default function LinkManager({ links, setLinks }: LinkProps) {
   const [selectedFilter, setSelectedFilter] = useState<Category | "All">("All");
 
   useEffect(() => {
