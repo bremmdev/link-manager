@@ -13,6 +13,7 @@ export const categories = [
   "python",
   "react",
   "theo",
+  "tools",
   "typescript",
 ] as const;
 
